@@ -13,5 +13,6 @@ struct MouseFloaterApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowResizability(.contentSize)
     }
 }
