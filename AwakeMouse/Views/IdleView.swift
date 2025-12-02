@@ -9,16 +9,16 @@ import SwiftUI
 
 struct IdleView: View {
     var body: some View {
-        Text("Mouse Floater")
-            .font(.largeTitle)
-            .bold()
+        Text("Awake Mouse")
+            .font(Font.custom("Minecraftia-Regular",size:25))
+            
         Text("IS NOT RUNNING")
-            .font(.title2)
-            .bold()
+            .font(Font.custom("Minecraftia-Regular",size:20))
             .opacity(0.7)
     }
 }
 
 #Preview {
+    
     IdleView()
 }

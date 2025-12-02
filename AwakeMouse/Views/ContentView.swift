@@ -19,19 +19,31 @@ struct ContentView: View {
     private let stepUpDownPixel: CGFloat = 15
     
     var body: some View {
-        VStack {
-            StatusView(isRunning: isRunning)
-            Text("Click On to Start")
-                .padding()
-            Text("Move Mouse to Stop")
-                .padding()
-            Button("On") {
-                onButtonClick()
+        
+            VStack {
+                StatusView(isRunning: isRunning)
+                Text("Click On to Start")
+                    .font(Font.custom("Minecraftia-Regular",size:15))
+                    .padding(.top)
+                Text("Move Mouse to Stop")
+                    .font(Font.custom("Minecraftia-Regular",size:15))
+                Button("On") {
+                    onButtonClick()
+                }
             }
-        }
-        .padding()
-    }
-    
+            .padding()
+            .background(
+                GeometryReader { geo in
+                    Color.clear
+                    
+                        .onAppear{
+                            print("size:\(geo.size)")
+                        }
+                        .onChange(of: geo.size) { newSize in
+                                                print("📏 BOYUT DEĞİŞTİ: \(newSize)")
+                                            }
+                } )
+}
     private func onButtonClick() {
         print("On Button Clicked")
         lastWarpedPoint = nil
