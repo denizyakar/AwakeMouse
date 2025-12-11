@@ -36,7 +36,7 @@ struct RetroPowerSwitch: View {
                 
                 // Text
                 Text("ON")
-                    .font(.custom("Minecraftia-Regular", size: 14))
+                    .font(.minecraftia(size: 14))
                     .foregroundColor(.white)
                     .offset(y: isOn ? 2 : -2)
             }
@@ -66,7 +66,7 @@ struct RetroPowerSwitch: View {
                 
                 // Text
                 Text("OFF")
-                    .font(.custom("Minecraftia-Regular", size: 14))
+                    .font(.minecraftia(size: 14))
                     .foregroundColor(.white.opacity(0.9))
                     .offset(y: isOn ? -2 : 2)
             }

@@ -9,13 +9,11 @@ import SwiftUI
 
 struct MoveToStopText: View {
     @State private var textAnimating: Bool = false
-    
-    private let fontName = "Minecraftia-Regular"
-    
+
     var body: some View {
         VStack {
             Text("Move Mouse to Stop!")
-                .font(.custom(fontName, size: 15))
+                .font(.minecraftia(size: 15))
                 .opacity(textAnimating ? 0.9 : 0.02)
         }
         .onAppear {

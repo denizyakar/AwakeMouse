@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct IdleView: View {
-    private let fontName: String = "Minecraftia-Regular"
     private let mainFontSize: CGFloat = 20
 
     var body: some View {
         VStack {
             Text("Awake Mouse")
-                .font(.custom(fontName, size: 25))
+                .font(.minecraftia(size: 25))
 
             Text("IS NOT RUNNING")
-                .font(.custom(fontName, size: mainFontSize))
+                .font(.minecraftia(size: mainFontSize))
                 .opacity(0.7)
                 .overlay(alignment: .topTrailing) {
                     ZzzAnimationView(

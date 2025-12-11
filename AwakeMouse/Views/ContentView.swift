@@ -11,8 +11,6 @@ import AppKit
 struct ContentView: View {
     @State private var engine = AwakeMouseEngine()
     
-    var fontName: String = "Minecraftia-Regular"
-    
     var body: some View {
         ZStack {
             RetroBackground()
@@ -53,7 +51,7 @@ struct ContentView: View {
                                 }
                                 
                                 Text("GitHub")
-                                    .font(Font.custom(fontName, size: 8))
+                                    .font(.minecraftia(size: 8))
                             }
                             
                             Spacer()

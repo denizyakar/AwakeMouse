@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ZzzAnimationView: View {
     var color: Color = .green.opacity(0.8)
-    var fontName: String = "Minecraftia-Regular"
     var fontSize: CGFloat = 12
     
     @State private var step = 0
@@ -19,13 +18,13 @@ struct ZzzAnimationView: View {
         ZStack(alignment: .leading) {
             // Invisible layer
             Text("zzz")
-                .font(.custom(fontName, size: fontSize))
+                .font(.minecraftia(size: fontSize))
                 .opacity(0)
                 .accessibilityHidden(true)
             
             // Real text
             Text(currentText)
-                .font(.custom(fontName, size: fontSize))
+                .font(.minecraftia(size: fontSize))
                 .foregroundColor(color)
         }
         .onAppear {
