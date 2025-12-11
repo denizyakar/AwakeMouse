@@ -16,7 +16,7 @@ Instead of dealing with complex settings or boring terminal commands, it offers 
 
 ---
 
-## 🌟 Key Features
+##  Key Features
 
 * **Open Source Configurability:** Currently, the app focuses on simplicity and does not include a settings menu. However, since the project is open source, you can clone the code and modify the **pixel step**, **movement direction**, **frequency**, or the **sensitivity threshold** directly in the `AwakeMouseEngine.swift` file to build a version tailored to your needs.
 * **Smart Threshold Detection:** The app instantly detects user interaction. When you move the mouse manually, it automatically stops the jiggler and hands control back to you.
@@ -28,14 +28,14 @@ Instead of dealing with complex settings or boring terminal commands, it offers 
 
 ---
 
-## 🏆 Ideal Use Cases
+##  Ideal Use Cases
 
 AwakeMouse is a lifesaver in scenarios such as:
 
 1.  📁 **Large File Downloads:** Prevent your Mac from sleeping and cutting off the connection while downloading huge files.
 2.  💻 **Compiling & Rendering:** Keep the screen on for developers or designers during long processing tasks.
 3.  🟢 **Online Presence:** Stay "Active" on communication apps (Teams, Slack, Discord, etc.) even when you are away from the keyboard.
-4.  ✨ **And much more...**
+4.  ✨ **Or whenever you don't want your computer to go A.F.K!**
 
 ---
 
