@@ -12,7 +12,7 @@ Instead of dealing with complex settings or boring terminal commands, it offers 
 
 | Idle Mode | Running Mode |
 |:---:|:---:|
-| <img src="URL_TO_YOUR_IDLE_SCREENSHOT_HERE" width="300"> | <img src="URL_TO_YOUR_RUNNING_SCREENSHOT_HERE" width="300"> |
+| <img src="[URL_TO_YOUR_IDLE_SCREENSHOT_HERE](https://github.com/denizyakar/AwakeMouse/blob/main/AwakeMouse/Screenshots/idle.png?raw=true)" width="300"> | <img src="[URL_TO_YOUR_RUNNING_SCREENSHOT_HERE](https://github.com/denizyakar/AwakeMouse/blob/main/AwakeMouse/Screenshots/running.png?raw=true)" width="300"> |
 
 ---
 
@@ -66,6 +66,11 @@ There are two ways to get started:
 You can download the latest pre-built version from the **Releases** page:
 
 [📥 Download Latest Version](https://github.com/denizyakar/AwakeMouse/releases)
+
+> **⚠️ Important Setup Note:**
+> Since this app is not signed with a paid Apple Developer ID, you may need to:
+> 1.  **Right-click** the app and select **Open** to bypass the Gatekeeper warning.
+> 2.  Go to **System Settings > Privacy & Security > Accessibility** and enable **AwakeMouse** to allow it to move your cursor.
 
 ### 2. For Developers
 If you want to inspect the code, customize the algorithms, or contribute, simply clone the repo:
