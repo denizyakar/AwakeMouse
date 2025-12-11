@@ -12,7 +12,7 @@ Instead of dealing with complex settings or boring terminal commands, it offers 
 
 | Idle Mode | Running Mode |
 |:---:|:---:|
-| <img src="[URL_TO_YOUR_IDLE_SCREENSHOT_HERE](https://github.com/denizyakar/AwakeMouse/blob/main/AwakeMouse/Screenshots/idle.png?raw=true)" width="300"> | <img src="[URL_TO_YOUR_RUNNING_SCREENSHOT_HERE](https://github.com/denizyakar/AwakeMouse/blob/main/AwakeMouse/Screenshots/running.png?raw=true)" width="300"> |
+| <img src="https://github.com/denizyakar/AwakeMouse/blob/main/AwakeMouse/Screenshots/idle.png?raw=true" width="300"> | <img src="https://github.com/denizyakar/AwakeMouse/blob/main/AwakeMouse/Screenshots/running.png?raw=true" width="300"> |
 
 ---
 
