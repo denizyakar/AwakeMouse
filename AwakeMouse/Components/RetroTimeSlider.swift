@@ -21,7 +21,6 @@ struct RetroTimeSlider: View {
     // Text settings
     private let textYAdjustment: CGFloat = 3
     private let fontSize: CGFloat = 10
-    private let fontName: String = "Minecraftia-Regular"
 
     // Color settings
     private let spineColor = Color(white: 0.25)
@@ -70,7 +69,7 @@ struct RetroTimeSlider: View {
                     .overlay(alignment: .leading) {
                         if isSelected {
                             Text(option.label)
-                                .font(.custom(fontName, size: fontSize))
+                                .font(.minecraftia(size: fontSize))
                                 .foregroundColor(activeColor)
                                 .fixedSize()
                                 .offset(x: option.textXOffset, y: textYAdjustment)
@@ -121,40 +120,6 @@ struct StatefulPreviewWrapper<Value, Content: View>: View {
         self.content = content
     }
     var body: some View { content($value) }
-}
-
-enum TimeOption: CaseIterable {
-    case unlimited, thirtyMin, oneHour, threeHours, fiveHours
-    
-    var label: String {
-        switch self {
-        case .unlimited: return "Unlimited"
-        case .thirtyMin: return "30 min"
-        case .oneHour: return "1 h"
-        case .threeHours: return "3 h"
-        case .fiveHours: return "5 h"
-        }
-    }
-    
-    var textXOffset: CGFloat {
-        switch self {
-        case .unlimited: return -53
-        case .thirtyMin: return -37
-        case .oneHour: return -20
-        case .threeHours: return -20
-        case .fiveHours: return -20
-        }
-    }
-    
-    var seconds: TimeInterval? {
-        switch self {
-        case .unlimited: return nil
-        case .thirtyMin: return 30 * 60
-        case .oneHour: return 60 * 60
-        case .threeHours: return 3 * 60 * 60
-        case .fiveHours: return 5 * 60 * 60
-        }
-    }
 }
 
 #Preview {

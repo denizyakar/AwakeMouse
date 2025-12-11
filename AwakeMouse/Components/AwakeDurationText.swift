@@ -12,11 +12,9 @@ struct AwakeDurationText: View {
     var selectedTime: TimeOption
     var timeRemaining: TimeInterval
     
-    private let fontName = "Minecraftia-Regular"
-    
     var body: some View {
         Text(displayText)
-            .font(.custom(fontName, size: 12))
+            .font(.minecraftia(size: 12))
             .foregroundColor(.white.opacity(0.8))
             .animation(nil, value: timeRemaining)
     }

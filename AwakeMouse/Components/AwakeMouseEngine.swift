@@ -24,8 +24,8 @@ class AwakeMouseEngine {
     private var lastWarpedPoint: CGPoint? = nil
     
     // Configuration
-    private let stepLeftRightPixel: CGFloat = 15
-    private let stepUpDownPixel: CGFloat = 15
+    private let stepLeftRightPixel: CGFloat = 25
+    private let stepUpDownPixel: CGFloat = 25
     
     func onButtonClick() {
         print("On Button Clicked")
@@ -87,13 +87,13 @@ class AwakeMouseEngine {
         let thresholdUD: CGFloat = 12
         let current = NSEvent.mouseLocation
         
+        // Check for User Movement
         if let last = lastWarpedPoint {
             let xChange = current.x - last.x
             let yChange = current.y - last.y
             
             if abs(xChange) > thresholdLR || abs(yChange) > thresholdUD {
-                print("user interaction detected")
-                print("timer invalidated")
+                print("User moved mouse (Delta: \(xChange), \(yChange)). Stopping.")
                 
                 isRunning = false
                 timer?.invalidate()
@@ -102,14 +102,16 @@ class AwakeMouseEngine {
             }
         }
         
+        // Calculate New Target (AppKit Coordinates - Bottom Left 0,0)
         let targetAppKit = CGPoint(
             x: current.x + dx,
             y: current.y + dy
         )
         
+        // Convert to Quartz Coordinates (Top Left 0,0)
         var targetQuartz = targetAppKit
-        if let h = NSScreen.main?.frame.height {
-            targetQuartz.y = h - targetAppKit.y
+        if let primaryScreenHeight = NSScreen.screens.first?.frame.height {
+            targetQuartz.y = primaryScreenHeight - targetAppKit.y
         }
         
         if let event = CGEvent(

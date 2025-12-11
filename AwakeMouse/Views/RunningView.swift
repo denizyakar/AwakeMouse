@@ -11,8 +11,6 @@ struct RunningView: View {
     @State private var hue: Double = 0
     @State private var isAnimating: Bool = false
     
-    var fontName: String = "Minecraftia-Regular"
-    
     var body: some View {
         VStack {
             statusTexts
@@ -49,10 +47,10 @@ struct RunningView: View {
     private var statusTexts: some View {
         VStack {
             Text("Awake Mouse")
-                .font(Font.custom(fontName, size: 25))
+                .font(.minecraftia(size: 25))
             
             Text("IS RUNNING")
-                .font(Font.custom(fontName, size: 20))
+                .font(.minecraftia(size: 20))
         }
     }
     
