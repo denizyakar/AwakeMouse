@@ -30,7 +30,7 @@ class AwakeMouseEngine {
     func onButtonClick() {
         print("On Button Clicked")
         lastWarpedPoint = nil
-        startTimer(intervalSeconds: 0.01)
+        startTimer(intervalSeconds: 0.04)
     }
     
     func stopApp() {
@@ -83,8 +83,8 @@ class AwakeMouseEngine {
     }
     
     private func moveMouseBy(dx: CGFloat, dy: CGFloat) {
-        let thresholdLR: CGFloat = 12
-        let thresholdUD: CGFloat = 12
+        let thresholdLR: CGFloat = 40
+        let thresholdUD: CGFloat = 40
         let current = NSEvent.mouseLocation
         
         // Check for User Movement
